@@ -1,4 +1,4 @@
-# Sosyal Medyası Frontend
+# Sosyal Medya Uygulaması Frontend
 
 Uzun zamandır aklımda olan bir projeyi okulların bitmesiyle yapmaya karar verdim amacım daha önce kullanmadığım react ve java spring boot ile fullstack bir proje yapmaktı ve böylece web teknolojilerini öğrenmek üzerine hızlı bir giriş yaptım ,aklımdaki çoğu özelliği ekledim ama halen geliştirmeye devam ediyorum son hali yakında.Bu projemin frontend kodlarını içeren reposu
 
