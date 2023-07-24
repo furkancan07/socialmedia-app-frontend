@@ -25,7 +25,7 @@ const Home = ({ girisYapildimi }) => {
       {girisYapildimi ? (
         <div>
           {posts.reverse().map((post, index) => {
-            console.log(post);
+            
             return <PostPage key={index} post={post}></PostPage>;
           })}
         </div>

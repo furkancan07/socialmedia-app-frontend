@@ -72,4 +72,10 @@ export const plusLike = async (id) => {
   return res;
   
 }
+// profil kısmında sadece kullanıcının paylaşımlarını getiren servis
+export const getUserPost = async (username) => {
+  const res = await axios.get('http://localhost:8080/api/getUserPost/' + username)
+  return res;
+  
+}
 
