@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { kaydolma } from "../api/server";
+import Home from "./Home";
 
-const SignUp = () => {
+const SignUp = ({girisYaptimi}) => {
   const [bilgi, setBilgi] = useState({
         username: null,
         display: null,
@@ -83,7 +84,8 @@ const SignUp = () => {
   //   setTekrar(event.target.value)
   // }
   return (
-    <div>
+    <>
+    {girisYaptimi ? <Home girisYapildimi={girisYaptimi}></Home> : <div>
       <h1>Kaydol</h1>
       <form >
         <div className='inputDiv'>
@@ -130,7 +132,8 @@ const SignUp = () => {
         </div>
               <Link to={"/login"} className='loginLink'>Hesabınız Var Mı Giriş Yap</Link>
       </form>
-    </div>
+    </div>}
+    </>
   )
 }
 

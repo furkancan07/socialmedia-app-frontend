@@ -9,20 +9,27 @@ import { Stack, Typography } from '@mui/material';
 
 const UserPage = ({ name, girisYapildimi }) => {
   const [posts, setPosts] = useState([]);
+
+  //hesaba giriş yaptığımız kullanıcıya ait paylaşımları çekmek için method
   const userpostList = async () => {
     try {
       const res = await getUserPost(name);
       setPosts(res.data);
-      console.log(res.data)
+      
       
     } catch (error) {
       
     }
     
   }
+
+
+  // her paylaşım değişikliğe uğradığında anlık olarak uygulamaızda göstermek için 
   useEffect(() => {
     userpostList();
-  },[])
+  }, [posts])
+  
+  // sayfamız
   return (
     <div>
       <Stack >
@@ -32,7 +39,7 @@ const UserPage = ({ name, girisYapildimi }) => {
       {
         girisYapildimi ? 
           posts.reverse().map((post, index) => {
-            return <UserPostPage key={index} post={post}/>
+            return <UserPostPage key={index} liste={posts}  post={post}/>
            
          })
          : <Link to='/login'>Giris Yapmadiniz giris yap</Link>

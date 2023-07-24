@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 
 
-
+// giriş yapma kısmının doğrulanması
 
 const Login = ({gonder,girisYaptimi}) => {
   const [disabled, setDisabled] = useState(false);
@@ -17,9 +17,11 @@ const Login = ({gonder,girisYaptimi}) => {
     
   })
   const navigate = useNavigate();
+  
+  
+  
   const inputChange = (event) => {
-      
-        const value = event.target.value;
+    const value = event.target.value;
     const name = event.target.name
     setErrors({...errors,[name]: undefined})
         setVeri({ ...veri, [name]: value })

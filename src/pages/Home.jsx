@@ -7,19 +7,26 @@ import PostPage from './PostPage';
 const Home = ({ girisYapildimi }) => {
   const [posts, setPosts] = useState([]);
 
+  // tüm paylaşımlartı getiren method
   const postGetir = async () => {
     try {
       const res = await getPost();
       setPosts(res.data);
     } catch (err) {
-      // Hata durumunda burada işlem yapabilirsiniz
+      // Hata durumunda burada işlem yapılacak
     }
   };
 
+
+  // useEffect yapısı
+
   useEffect(() => {
     postGetir();
-  }, []);
+  }, [posts]);
 
+
+
+  
   return (
     <div>
       {girisYapildimi ? (

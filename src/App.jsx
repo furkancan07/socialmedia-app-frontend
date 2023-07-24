@@ -18,6 +18,8 @@ function App() {
   const [giris, setGiris] = useState(false);
   const [name, setName] = useState('');
 
+
+  // login sayfamızdan gönderdiğimiz username ve giriş yapım yapmadığının bilgisi
   const gonder = (kontrol, username) => {
     setGiris(kontrol);
     setName(username);
@@ -25,6 +27,8 @@ function App() {
     localStorage.setItem('name', username);
   };
 
+
+  // hesaptan çıkış yapma methodu
   const cikisYap = () => {
     setGiris(false);
     setName('');
@@ -33,12 +37,17 @@ function App() {
     alert('Çıkış Yapıldı');
   };
 
+
+  // useEffect yapısı
   useEffect(() => {
     const storedGiris = localStorage.getItem('giris');
     const storedName = localStorage.getItem('name');
     setGiris(storedGiris === 'true');
     setName(storedName);
   }, []);
+
+
+  //Routelar adres
   return (
     <div className='App'>
       {
@@ -46,7 +55,7 @@ function App() {
       }
       
       <Routes>
-        <Route path='/' element={<SignUp></SignUp>}></Route>
+        <Route path='/' element={<SignUp girisYaptimi={giris}></SignUp>}></Route>
         
          <Route
           path='/home'

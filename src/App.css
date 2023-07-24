@@ -76,5 +76,10 @@ button{
 .TaskButton{
   margin: 15px 150px;
   padding: 12px 20px;
+
+}
+.edit-button{
+  margin-top: 8px;
+  margin-left: 4px;
   
 }
