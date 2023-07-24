@@ -41,9 +41,10 @@ padding: 15px 15px;
   transform: translate(-50%, -50%);
 }
 button{
+  margin: 5px;
   background-color: white;
   padding: 10px 25px;
-  border: solid blue;
+  border: solid rgb(2, 2, 28);
   border-radius: 12px;
 }
 .invalid-feedback{
@@ -63,4 +64,17 @@ button{
 }
 .arkaRenk{
   background-color: darkgray;
+}
+.form-post{
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin: 35px;
+}
+.TaskButton{
+  margin: 15px 150px;
+  padding: 12px 20px;
+  
 }

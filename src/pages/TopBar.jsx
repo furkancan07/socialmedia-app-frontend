@@ -35,7 +35,7 @@ const TopBar = ({ name, cikis }) => {
         </Link>
       </Button>
       <Button startIcon={<UploadIcon />}>
-        <Link className="link-topbar" to={'/home'}>
+        <Link className="link-topbar" to={'/postAdd'}>
           Paylaş
         </Link>
           </Button>

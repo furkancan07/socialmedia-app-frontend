@@ -5,6 +5,9 @@ import axios from "axios";
 //     var res = await axios.post('http://localhost:8080/api/auth', {}, {auth: creds});
 //     return res;
 // }
+
+
+// login
 export const girisYap = async (creds) => {
   // Base64 encode kullanıcı adı ve şifre
   const encodedCredentials = btoa(creds.username + ':' + creds.sifre);
@@ -23,14 +26,24 @@ export const girisYap = async (creds) => {
   }
 };
 
-
+// signUp
 export const kaydolma = async (body) => {
     var res = await axios.post('http://localhost:8080/api/users', body)
     return res;
 }
-
+// şifre unutma durumunda çalışan servis
 export const sifreDegistir=async(body) => {
   var res = await axios.post("http://localhost:8080/api/forgot", body)
+  return res;
+}
+// paylaşımların tamamını getiren servis
+export const getPost=async() => {
+  var res = await axios.get('http://localhost:8080/api/getShares')
+  return res;
+}
+// paylaşım ekleme
+export const postAdd = async (username,body) => {
+  var res=await axios.post('http://localhost:8080/api/createShare/'+username,body)
   return res;
 }
 

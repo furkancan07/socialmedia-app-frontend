@@ -7,39 +7,38 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import Forgot from './pages/Forgot'
-import { AuthProvider } from './context/AuthContext'
+
 import UserPage from './pages/UserPage'
 import TopBar from './pages/TopBar'
+import PostAddPage from './pages/PostAddPage'
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const [giris, setGiris] = useState(false);
-  const [name, setName] = useState("");
-  
- const gonder=(kontrol,username) => {
-   setGiris(kontrol)
-   setName(username)
-   localStorage.setItem('giris', kontrol ? true : false);
+  const [name, setName] = useState('');
 
-   
- }
-  const navigate = useNavigate();
-  const cikisYap = (logout) => {
-    
-    setGiris(logout)
+  const gonder = (kontrol, username) => {
+    setGiris(kontrol);
+    setName(username);
+    localStorage.setItem('giris', kontrol ? 'true' : 'false');
+    localStorage.setItem('name', username);
+  };
 
-    alert("Çıkış Yapıldı")
-    navigate("/login")
-    localStorage.setItem('giris', logout ? true : false);
+  const cikisYap = () => {
+    setGiris(false);
+    setName('');
+    localStorage.setItem('giris', 'false');
+    localStorage.removeItem('name');
+    alert('Çıkış Yapıldı');
+  };
 
-
-  }
   useEffect(() => {
     const storedGiris = localStorage.getItem('giris');
-  setGiris(storedGiris === 'true');
-  },[])
+    const storedName = localStorage.getItem('name');
+    setGiris(storedGiris === 'true');
+    setName(storedName);
+  }, []);
   return (
     <div className='App'>
       {
@@ -49,11 +48,17 @@ function App() {
       <Routes>
         <Route path='/' element={<SignUp></SignUp>}></Route>
         
-        <Route path='/home' element={<Home girisYapildimi={giris}></Home>}></Route> 
+         <Route
+          path='/home'
+          element={<Home girisYapildimi={giris} key={giris.toString()} />} // girisYapildimi değiştiğinde bileşenin tekrar render edilmesini sağlamak için key ekledik
+        />
         
            <Route path='/login' element={<Login girisYaptimi={giris} gonder={gonder}></Login>}></Route>
          <Route path='/profil'  element={<UserPage girisYapildimi={giris} name={name}></UserPage>}></Route>
-        
+         <Route
+          path='/postAdd'
+          element={<PostAddPage girisYaptimi={giris} name={name} key={giris.toString()}/>} // girisYapildimi değiştiğinde bileşenin tekrar render edilmesini sağlamak için key ekledik
+        />
         
         <Route path='/forgotPassword' element={<Forgot></Forgot>}></Route>
         </Routes>
