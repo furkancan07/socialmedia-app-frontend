@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getPost } from '../api/server';
 import PostPage from './PostPage';
+import Login from './Login';
 
 const Home = ({ girisYapildimi }) => {
   const [posts, setPosts] = useState([]);
@@ -37,7 +38,7 @@ const Home = ({ girisYapildimi }) => {
           })}
         </div>
       ) : (
-        <Link to='/login'>Giriş Yapmadınız, giriş yap</Link>
+        <Login girisYaptimi={girisYapildimi}></Login>
       )}
     </div>
   );

@@ -4,6 +4,7 @@ import UserPostPage from './UserPostPage';
 import { getUserPost } from '../api/server';
 import PostPage from './PostPage';
 import { Stack, Typography } from '@mui/material';
+import Login from './Login';
 
 
 
@@ -42,7 +43,7 @@ const UserPage = ({ name, girisYapildimi }) => {
             return <UserPostPage key={index} liste={posts}  post={post}/>
            
          })
-         : <Link to='/login'>Giris Yapmadiniz giris yap</Link>
+         : <Login girisYaptimi={girisYapildimi}></Login>
       }
     </div>
     
