@@ -4,8 +4,10 @@ import { blue } from '@mui/material/colors';
 import React, { useEffect, useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { getLikeCount, minusLike, plusLike } from '../api/server';
+import CommentIcon from '@mui/icons-material/Comment';
+import CommentPage from './CommentPage';
 
-const PostPage = ({ post }) => {
+const PostPage = ({name, post }) => {
   // post nesnesinden gerekli verileri alalım
   const { id, description, title, image, user } = post;
   const [color, setColor] = useState(() => {
@@ -17,7 +19,10 @@ const PostPage = ({ post }) => {
     return parseInt(localStorage.getItem(`sayac_${id}`)) || 0;
   });
   const [like, setLike] = useState(0);
+  const [cmntPage, setCmntPage] = useState(false)
+ 
   
+
   const likeCount = () => {
     getLikeCount(id)
       .then((res) => {
@@ -63,15 +68,27 @@ const PostPage = ({ post }) => {
       localStorage.setItem(`color_${id}`, 'action');
     }
   };
+ const cmntPageClose=() => {
+   setCmntPage(false);
+  }
+  
   
   useEffect(() => {
-    
-    
     likeCount();
   }, [like]);
   
   return (
-    <Card className='Card' sx={{ flexDirection: 'row', display: 'flow-root', marginTop: 4, marginBottom: 4, marginRight: 10, marginLeft: 10, maxWidth: 1000 }}>
+    <>
+      <Card className='Card' sx={{
+        flexDirection: 'row',
+        display: 'flow-root',
+        marginTop: 4,
+        marginBottom: 4,
+        marginRight: 10,
+        marginLeft: 10,
+        maxWidth: 1000,
+        
+      }}>
       <CardHeader
         avatar={<Avatar sx={{ bgcolor: blue }}>{user.username.charAt(0)}</Avatar>}
         title={user.username}
@@ -89,9 +106,20 @@ const PostPage = ({ post }) => {
         <IconButton onClick={renkDegis}>
           <FavoriteIcon color={color} />
         </IconButton>
+        <IconButton onClick={()=>{setCmntPage(true)}} >
+          <CommentIcon />
+        </IconButton >
       </CardActions>
-      <div className='like-c'>{like}</div>
-    </Card>
+        <div className='like-c'>{like}</div>
+        
+      </Card>
+      {
+        cmntPage ? <CommentPage  close={cmntPageClose} name={name} postId={id}></CommentPage> : <></>
+      }
+      
+    </>
+    
+   
   );
 };
 

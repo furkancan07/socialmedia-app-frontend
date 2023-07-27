@@ -5,7 +5,7 @@ import { getPost } from '../api/server';
 import PostPage from './PostPage';
 import Login from './Login';
 
-const Home = ({ girisYapildimi }) => {
+const Home = ({name, girisYapildimi }) => {
   const [posts, setPosts] = useState([]);
 
   // tüm paylaşımlartı getiren method
@@ -34,7 +34,7 @@ const Home = ({ girisYapildimi }) => {
         <div>
           {posts.reverse().map((post, index) => {
             
-            return <PostPage key={index} post={post}></PostPage>;
+            return <PostPage key={index} name={name} post={post}></PostPage>;
           })}
         </div>
       ) : (

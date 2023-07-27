@@ -61,6 +61,11 @@ export const commentsAdd = async(username, id, body) => {
   var res = await axios.post('http://localhost:8080/api/addComment/' + username + "/" + id, body);
   return res;
 }
+// bir paylaşıma gelen yorumları getirme 
+export const getComments = async (id) => {
+  var res = await axios.get('http://localhost:8080/api/getComment/' + id);
+  return res;
+}
 // paylaşıma ait like sayısını getiren servis
 export const getLikeCount=async (id) => {
   var res = await axios.get('http://localhost:8080/api/getLikeCount/' + id);

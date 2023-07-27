@@ -59,7 +59,7 @@ function App() {
         
          <Route
           path='/home'
-          element={<Home girisYapildimi={giris} key={giris.toString()} />} // girisYapildimi değiştiğinde bileşenin tekrar render edilmesini sağlamak için key ekledik
+          element={<Home name={name} girisYapildimi={giris} key={giris.toString()} />} // girisYapildimi değiştiğinde bileşenin tekrar render edilmesini sağlamak için key ekledik
         />
         
            <Route path='/login' element={<Login girisYaptimi={giris} gonder={gonder}></Login>}></Route>

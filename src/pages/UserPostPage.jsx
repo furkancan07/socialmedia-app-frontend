@@ -33,12 +33,7 @@ const UserPostPage = ({ post, liste }) => {
     }
 
 
-    // beğeni renk değiştirmw
-    const renkDegis = (e) => {
-        e.preventDefault();
-        setSayac(sayac + 1);
-        sayac % 2 == 0 ? setColor('warning') : setColor("action");
-    }
+    
 
     // paylaşımı düzenlemek için kontrol
     const updateEdit =() => {
@@ -140,9 +135,7 @@ const UserPostPage = ({ post, liste }) => {
         </Typography>
           </CardContent>
           <CardActions disableSpacing>
-              <IconButton onClick={renkDegis}>
-                  <FavoriteIcon color={color} ></FavoriteIcon>
-              </IconButton>
+            
               <IconButton onClick={updateEdit}>
                  <EditIcon></EditIcon>
               </IconButton>
