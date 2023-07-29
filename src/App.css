@@ -1,0 +1,90 @@
+body{
+  background-color: #141f27;
+  color: white;
+
+}
+h1{
+  margin-left: 5vh;
+}
+
+
+form{
+margin: 30px 40px;
+
+}
+form label{
+  margin-bottom: 5px;
+  color: white;
+}
+.inputDiv{
+display: flex;
+flex-direction: column;
+padding-bottom: 15px;
+padding-left: 5px;
+
+}
+input{
+padding: 15px 15px;
+}
+
+.container {
+  height: 50px;
+  position: relative;
+  
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+button{
+  margin: 5px;
+  background-color: white;
+  padding: 10px 25px;
+  border: solid rgb(2, 2, 28);
+  border-radius: 12px;
+}
+.invalid-feedback{
+  color:  rgba(226, 38, 38, 0.758);
+}
+.loginLink{
+  margin: 10px 5px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.link-topbar {
+  
+  color: wheat;
+  text-decoration: none;
+}
+.arkaRenk{
+  background-color: darkgray;
+}
+.form-post{
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin: 35px;
+}
+.TaskButton{
+  margin: 15px 150px;
+  padding: 12px 20px;
+
+}
+.edit-button{
+  margin-top: 8px;
+  margin-left: 4px;
+  
+}
+.like-c{
+  display: flex;
+  flex-direction: row;
+
+}
