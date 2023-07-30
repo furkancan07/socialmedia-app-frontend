@@ -93,7 +93,16 @@ export const minusLike = async (id) => {
   return res;
   
 }
-
+// mesaj oluşturna
+export const addMessage=async(sender,receiver,body) => {
+  var res = await axios.post('http://localhost:8080/api/addMessage/' + sender + "/" + receiver,body);
+  return res;
+}
+// mesajları gösteren servis-list
+export const getMessages = async (sender, receiver) => {
+  var res = await axios.get('http://localhost:8080/api/getMessages/' + sender + "/" + receiver);
+  return res;
+}
 
 // profil kısmında sadece kullanıcının paylaşımlarını getiren servis
 export const getUserPost = async (username) => {

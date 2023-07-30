@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { getAllUsers } from '../api/server'
 import UserList from './UserList';
 
-const Message = () => {
-    const [users, setUsers] = useState([]);
+const Message = ({name}) => {
+    const [ users, setUsers] = useState([]);
   const getUsers = async () => {
    
       try {
@@ -23,7 +23,7 @@ const Message = () => {
   return (
     <div>
           {users.reverse().map((user, index) => {
-              return <UserList user={user} key={index}></UserList>
+              return <UserList  name={name} user={user} key={index}></UserList>
           })}
           
     </div>

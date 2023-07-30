@@ -15,9 +15,11 @@ import Message from './pages/Message'
 
 
 
+
 function App() {
   const [giris, setGiris] = useState(false);
   const [name, setName] = useState('');
+ 
 
 
   // login sayfamızdan gönderdiğimiz username ve giriş yapım yapmadığının bilgisi
@@ -37,6 +39,7 @@ function App() {
     localStorage.removeItem('name');
     alert('Çıkış Yapıldı');
   };
+  
 
 
   // useEffect yapısı
@@ -45,6 +48,7 @@ function App() {
     const storedName = localStorage.getItem('name');
     setGiris(storedGiris === 'true');
     setName(storedName);
+   
   }, []);
 
 
@@ -71,7 +75,7 @@ function App() {
         />
         
         <Route path='/forgotPassword' element={<Forgot></Forgot>}></Route>
-        <Route path='/message' element={<Message></Message>}></Route>
+        <Route path='/message' element={<Message  name={name}></Message>}></Route>
         </Routes>
       
     </div>

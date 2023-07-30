@@ -85,8 +85,7 @@ const PostPage = ({name, post }) => {
  
   
   
-  useEffect(() => {
-    
+  useEffect(() => { 
     commentCount();
     likeCount();
   }, [like,cmntCount]);
