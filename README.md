@@ -11,14 +11,35 @@ Uzun zamandır aklımda olan bir projeyi okulların bitmesiyle yapmaya karar ver
    *        Mesajlaşma özelliği sayesinde kullanıcılar birbirleriyle özel mesajlar aracılığıyla iletişim kurabilirler.
 
 
-## Ekler
 
-Ek Özellikler Gelecek...
+
+
 
 
 ## Backend Tarafı
 
 - [backend](https://github.com/furkancan2107/springboot-socalmedia-app-backend) kodları için tıkla.
+
+
+## Ekran Görüntüleri
+# Kaydolma Ekranı
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/kaydol.png)
+# Giriş Yapma Ekranı
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/giriş%20yap.png)
+# Şifremi Unuttum
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/şifre%20değiştir.png)
+
+# AnaEkran
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/anasayfa.png)
+# Paylaşma
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/paylaşma.png)
+# Mesaj
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/mesajlaşma.png)
+
+# Yorum
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/yorum.png)
+# Paylaşım Düzenleme 
+![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/duzenle.png)
 
 ## Bilgisayarınızda Çalıştırın
 
