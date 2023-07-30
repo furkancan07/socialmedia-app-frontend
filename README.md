@@ -8,7 +8,7 @@ Uzun zamandır aklımda olan bir projeyi okulların bitmesiyle yapmaya karar ver
    *        Kullanıcılar, uygulama üzerinden paylaşımlar ekleyebilir, düzenleyebilir ve silebilir.
    *        Paylaşımları görüntüleme: Kullanıcılar, diğer kullanıcıların paylaşımlarını keşfedebilir ve görüntüleyebilir.
    *        Beğenme ve yorum yapma: Kullanıcılar, beğendikleri paylaşımları işaretleyebilir ve yorumlar yapabilirler.
-   *        Planlanan: Mesajlaşma özelliği sayesinde kullanıcılar birbirleriyle özel mesajlar aracılığıyla iletişim kurabilirler.
+   *        Mesajlaşma özelliği sayesinde kullanıcılar birbirleriyle özel mesajlar aracılığıyla iletişim kurabilirler.
 
 
 ## Ekler
