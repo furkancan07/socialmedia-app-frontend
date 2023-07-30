@@ -40,7 +40,7 @@ const UserList = ({ name, user }) => {
         }}
       >
         <ButtonBase onClick={msgPageOn}>
-          <CardHeader avatar={<Avatar>{user.username.charAt(0)}</Avatar>} title={user.username} />
+          <CardHeader avatar={<Avatar>{user.username.charAt(0)}</Avatar>} title={user.username==name ? "Siz(kendinize mesaj gönderin)" : user.username} />
         </ButtonBase>
         
       </Card>}
