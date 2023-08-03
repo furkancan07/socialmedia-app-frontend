@@ -41,6 +41,8 @@ Uzun zamandır aklımda olan bir projeyi okulların bitmesiyle yapmaya karar ver
 # Paylaşım Düzenleme 
 ![resim1](https://github.com/furkancan2107/socialmedia-app-frontend/blob/main/resimler/duzenle.png)
 
+## Video
+[video](https://www.youtube.com/watch?v=ZuEnceGPzKU)
 ## Bilgisayarınızda Çalıştırın
 
 Projeyi klonlayın
