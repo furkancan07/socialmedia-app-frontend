@@ -107,7 +107,7 @@ return (
         }}
       >
         <CardHeader 
-          avatar={<Avatar sx={{ bgcolor: blue }}>{user.username.charAt(0)}</Avatar>}
+          avatar={<Avatar src={user.image} sx={ { bgcolor: blue }}>{user.username.charAt(0)}</Avatar>}
           title={user.username}
         />
         {image && image.includes('image') ? ( // Eğer image varsa ve blob değilse (yani resim), resmi göster

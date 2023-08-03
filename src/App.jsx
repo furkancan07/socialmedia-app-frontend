@@ -75,7 +75,7 @@ function App() {
         />
         
         <Route path='/forgotPassword' element={<Forgot></Forgot>}></Route>
-        <Route path='/message' element={<Message  name={name}></Message>}></Route>
+        <Route path='/message' element={<Message girisYaptimi={giris} name={name}></Message>}></Route>
         </Routes>
       
     </div>

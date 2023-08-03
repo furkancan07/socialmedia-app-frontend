@@ -19,7 +19,7 @@ const CommentListPage = ({ comment }) => {
       }}
     >
       <CardHeader
-        avatar={<Avatar sx={{ bgcolor: grey[800] }}>{user.username.charAt(0)}</Avatar>}
+        avatar={<Avatar src={user.image} sx={{ bgcolor: grey[800] }}>{user.username.charAt(0)}</Avatar>}
         title={user.username}
       />
       <CardContent>

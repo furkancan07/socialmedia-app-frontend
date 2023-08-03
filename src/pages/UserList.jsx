@@ -6,10 +6,10 @@ import MessagePage from './MessagePage';
 
 
 const UserList = ({ name, user }) => {
-  const { username, id } = user;
-  const [messages, setMessages] = useState([]);
+  const { username, id,image } = user;
+ 
   const navigate = useNavigate();
-  const [message, setMessage] = useState("");
+ 
   const [msgPage, setMsgPage] = useState(false);
 
 
@@ -24,12 +24,13 @@ const UserList = ({ name, user }) => {
   return (
     <>
      
-{msgPage ? <MessagePage sender={name} receiver={user.username} close={msgPageClose}></MessagePage> :  <Card
+{msgPage ? <MessagePage sender={name} receiver={username} close={msgPageClose}></MessagePage> :  <Card
         style={{
           backgroundColor: '#000000',
           color: 'white',
         }}
         sx={{
+         
           flexDirection: 'row',
           display: 'flow-root',
           marginTop: 4,
@@ -40,7 +41,8 @@ const UserList = ({ name, user }) => {
         }}
       >
         <ButtonBase onClick={msgPageOn}>
-          <CardHeader avatar={<Avatar>{user.username.charAt(0)}</Avatar>} title={user.username==name ? "Siz(kendinize mesaj gönderin)" : user.username} />
+          
+          <CardHeader  avatar={<Avatar src={image}>{user.username.charAt(0)}</Avatar>} title={user.username==name ? "Siz(kendinize mesaj gönderin)" : user.username} />
         </ButtonBase>
         
       </Card>}

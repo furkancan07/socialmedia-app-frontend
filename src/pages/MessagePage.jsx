@@ -32,7 +32,7 @@ const MessagePage = ({sender, receiver, close }) => {
     }
     useEffect(() =>
     { getAllMessages() },
-        [message])
+        [messages,message])
     return (
       
         <div>

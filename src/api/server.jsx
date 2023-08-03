@@ -110,4 +110,13 @@ export const getUserPost = async (username) => {
   return res;
   
 }
-
+// profil resmi güncelleme
+export const updateProfil = async (username, body) => {
+  const res = await axios.post('http://localhost:8080/api/setImage/' + username, body);
+  return res;
+}
+// herhangi bir user bilgisini getirir
+export const getUser = async (username) => {
+  var res = await axios.get('http://localhost:8080/api/getUser/' + username);
+  return res;
+}

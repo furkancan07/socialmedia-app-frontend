@@ -129,7 +129,7 @@ const UserPostPage = ({ post, liste }) => {
           maxWidth: '75%',
           }}>
         <CardHeader
-              avatar={<Avatar sx={{ bgcolor: blue }}>{ user.username.charAt(0)}</Avatar>} // R harfi yerine "A" harfi kullanmak istiyorsanız burayı değiştirebilirsiniz
+              avatar={<Avatar src={post.user.image} sx={{ bgcolor: blue }}>{ user.username.charAt(0)}</Avatar>} // R harfi yerine "A" harfi kullanmak istiyorsanız burayı değiştirebilirsiniz
           title={user.username}
            // Bu kısımda tarih bilgisi veya başka bir altbaşlık kullanmak isterseniz değiştirebilirsiniz
             />
